@@ -8,11 +8,13 @@ module.exports = {
        },
        fontFamily: {
          'grotesk': ['Darker Grotesque', 'sans-serif']
-       }
+       },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      width: ["group-hover"]
+    },
   },
   plugins: [],
 }
