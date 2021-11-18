@@ -31,7 +31,7 @@
               name="list"
               tag="ul"
             >
-              <li v-for="(site) in sites" :key="site.slug" class="group m-0 p-0">
+              <li v-for="(site, index) in sites" :key="site.slug" class="group m-0 p-0" :style="{ '--i': index }">
                 <a
                   :href="site.link"
                   target="blank"
@@ -158,15 +158,14 @@ body {
   opacity: 0;
 }
 
-.list-item {
-  display: inline-block;
-  margin-right: 10px;
-}
 .list-enter-active, .list-leave-active {
   transition: all 5s;
+  transition-delay: calc( 0.2s *  var(--i));
 }
 .list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
   opacity: 0;
-  transform: translateY(30px);
+  
 }
+
+
 </style>
