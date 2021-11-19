@@ -71,7 +71,7 @@
         <div class="w-5/12 flex flex-col justify-between h-100">
           <div class="flex grid-cols-2 gap-2">
             <p class="">
-              Lorem ipsum dolor sit amet, consectfgetur adipisicing elit.
+              Lorem ipsum dolor sweweit amet, consectfgetur adipisicing elit.
               Recusandae fugiat facere, sint aut officia accusantium, voluptatum
               magnam mollitia perferendis consequatur dolore nam distinctio ea
               ab voluptas? Voluptate natus adipisci eveniet.
@@ -97,6 +97,7 @@
 
 <script lang="ts">
 import Vue from "vue";
+
 export default Vue.extend({
   async asyncData({ $content }) {
     const sites = await $content("sites").fetch();
@@ -113,7 +114,7 @@ export default Vue.extend({
   methods: {
     updateLink(url: any) {
       this.link = url;
-      console.log(url);
+      
     },
   },
   transition: {
@@ -128,7 +129,6 @@ export default Vue.extend({
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@500&display=swap");
 
 h1 {
   @apply leading-none tracking-wider;
