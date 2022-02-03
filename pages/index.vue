@@ -2,23 +2,7 @@
   <div v-if="show">
     <div class="p-10 flex h-screen flex-col justify-between z-10">
       <div class="top-row flex justify-between">
-        <h1>Fabian Beier<br />Design & Development</h1>
-        <div
-          class="
-            circle
-            w-24
-            h-24
-            border-2 border-green-500
-            rounded-full
-            flex
-            justify-center
-            items-center
-          "
-        >
-          <transition name="page" appear>
-            <p class="mb-1">Contact</p>
-          </transition>
-        </div>
+        <h1>Fabian Beier<br>Design & Development</h1>
       </div>
       <div class="flex gap-2 w-3/12 text-3xl leading-7">
         <nuxt-content :document="link" class="" />
@@ -87,11 +71,11 @@
         </div>
       </div>
     </div>
-    <div class="w-full fixed h-full top-0 left-0 -z-10 opacity-40">
+    <!-- <div class="w-full fixed h-full top-0 left-0 -z-10 opacity-40">
       <div id="container">
         <canvas id="canvas3d"></canvas>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -137,12 +121,12 @@ h2 {
   @apply text-xl;
 }
 body {
-  @apply bg-black  text-green-500 font-grotesk text-base leading-none tracking-wider;
+  @apply bg-red-800  text-red-300 font-grotesk text-base leading-none tracking-wider;
 }
 
 .page-enter-active,
 .page-leave-active {
-  transition: opacity 5s;
+  transition: opacity 1s;
 }
 .page-enter,
 .page-leave-to {
@@ -159,8 +143,8 @@ body {
 }
 
 .list-enter-active, .list-leave-active {
-  transition: all 5s;
-  transition-delay: calc( 0.2s *  var(--i));
+  transition: all 1s;
+  transition-delay: calc( 0.05s *  var(--i));
 }
 .list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
   opacity: 0;
